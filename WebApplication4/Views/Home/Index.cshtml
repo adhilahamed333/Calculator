@@ -1,7 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<script>
+    var ajaxUrl="@Url.Action("Evaluate", "Home")";
+</script>
 
     <div >
         @using (@Html.BeginForm("Index", "Home"))

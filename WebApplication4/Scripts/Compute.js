@@ -162,21 +162,23 @@
         });
 
         $("#eq").click(function () {
-            var x = document.getElementById("txt").value;
-            var y = x.slice(-1)
+            
+            var x = $('#txt').val();
             console.log(eval(x));
+            var input = eval(x);
 
-        //    $.ajax({
-        //url: '/home/evaluate',
-        //        type: "post",
-        //        data: {'txt': y},
-        //        success: function (msg) {
-        //$('#txt').html(msg);
-        //        }
-        //    }).error(function () {
-        //$('#txt').html('error');
-        //    }
-        //    );
+            $.ajax({
+                url: ajaxUrl,
+                type: "post",
+                data: { textFrom: input },
+                dataType: "json",
+                success: function (result) {
+                    $('#txt').val(result.textTo);
+                },
+                error: function (result) {
+                    $('#txt').html('error');
+                }
+            });
 
         });
     });
