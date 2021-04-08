@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+    <div >
+        @using (@Html.BeginForm("Index", "Home"))
+        {
+            <h1>Calculator</h1>
+            <table >
+                
+                <tr>
+                    <td colspan="4"><input type="text" id="txt" value="@ViewBag.Result" class="form-control" />   </td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="b7" value="7" class="btn-lg" /></td>
+                    <td><input type="button" id="b8" value="8" class="btn-lg"/></td>
+                    <td><input type="button" id="b9" value="9" class="btn-lg"/></td>
+                    <td><input type="button" id="div" value="/" class="btn-lg center-block"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="b4" value="4" class="btn-lg"/></td>
+                    <td><input type="button" id="b5" value="5"  class="btn-lg"/></td>
+                    <td><input type="button" id="b6" value="6" class="btn-lg" /></td>
+                    <td><input type="button" id="multy" value="*" class="btn-lg center-block" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="b1" value="1" class="btn-lg" /></td>
+                    <td><input type="button" id="b2" value="2" class="btn-lg"  /></td>
+                    <td><input type="button" id="b3" value="3" class="btn-lg" /></td>
+                    <td><input type="button" id="sub" value="-" class="btn-lg center-block"  /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" id="b0" value="0" class="btn-lg" /></td>
+                    <td></td>
+                    <td><input type="button" id="add" value="+" class="btn-lg center-block" /></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="reset" id="re" value="Clear" class="btn-warning center-block btn-lg" />
+                    </td>
+                    <td>
+                        <input type="button" id="eq" value="=" class="btn-primary center-block btn-lg"/>
+                    </td>
+                </tr>
+                
+            </table>
+        }
+    </div>
+
+
