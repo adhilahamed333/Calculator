@@ -5,10 +5,7 @@
         });
 
         $("#b0").click(function() {
-            //var x = document.getElementById("txt").value;
-            //console.log(x);
             var x = $("#txt").val();
-            console.log(x);
             if (x == "0")
             {
         $("#txt").val("0");
@@ -20,7 +17,7 @@
 
         $("#b1").click(function()
         {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("1");
@@ -32,7 +29,7 @@
 
         $("#b2").click(function()
         {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("2");
@@ -44,7 +41,7 @@
 
         $("#b3").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("3");
@@ -56,7 +53,7 @@
 
         $("#b4").click(function()
          {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("4");
@@ -68,7 +65,7 @@
 
         $("#b5").click(function()
          {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("5");
@@ -80,7 +77,7 @@
 
         $("#b6").click(function()
          {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("6");
@@ -92,7 +89,7 @@
 
         $("#b7").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
 
            {
@@ -105,7 +102,7 @@
 
         $("#b8").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("8");
@@ -117,7 +114,7 @@
 
         $("#b9").click(function()
          {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x == "0")
             {
         $("#txt").val("9");
@@ -130,7 +127,7 @@
         
         $("#div").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             var y = x.slice(-1)
             if (y == "/" || y == "+" || y == "*" || y == "-") { } else {
         $("#txt").val(x + "/")
@@ -139,7 +136,7 @@
 
         $("#multy").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             var y = x.slice(-1)
             if (y == "/" || y == "+" || y == "*" || y == "-") { } else {
         $("#txt").val(x + "*")
@@ -148,7 +145,7 @@
 
         $("#sub").click(function()
           {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             var y = x.slice(-1)
             if (y == "/" || y == "+" || y == "*" || y == "-") { } else {
         $("#txt").val(x + "-")
@@ -157,7 +154,7 @@
 
         $("#add").click(function()
          {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             var y = x.slice(-1)
             if (y == "/" || y == "+" || y == "*" || y == "-") { } else {
         $("#txt").val(x + "+")
@@ -173,7 +170,7 @@
             $.ajax({
                 url: ajaxUrl,
                 type: "post",
-                data: { textFrom: input },
+                data: { equat:x ,result:input },
                 dataType: "json",
                 success: function (result) {
                     $('#txt').val(result.textTo);
@@ -192,7 +189,7 @@
         });
 
         $("#bd").click(function () {
-            var x = document.getElementById("txt").value;
+            var x = $("#txt").val();
             if (x=="") {
                 $("#txt").val("0.");
             } else {

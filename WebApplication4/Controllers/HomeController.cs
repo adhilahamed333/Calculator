@@ -30,9 +30,9 @@ namespace WebApplication4.Controllers
         }
 
         [HttpPost]
-        public JsonResult Evaluate(String textFrom)
+        public JsonResult Evaluate(String equat,String result)
         {
-            return Json(new { textTo = textFrom }, JsonRequestBehavior.AllowGet);            
+            return Json(new { textTo = equat+"="+result }, JsonRequestBehavior.AllowGet);            
         }
 
        
