@@ -5,7 +5,10 @@
         });
 
         $("#b0").click(function() {
-            var x = document.getElementById("txt").value;
+            //var x = document.getElementById("txt").value;
+            //console.log(x);
+            var x = $("#txt").val();
+            console.log(x);
             if (x == "0")
             {
         $("#txt").val("0");
@@ -163,8 +166,8 @@
 
         $("#eq").click(function () {
             
-            var x = $('#txt').val();
-            console.log(eval(x));
+            var x = $('#txt').val(); 
+            
             var input = eval(x);
 
             $.ajax({
@@ -180,5 +183,20 @@
                 }
             });
 
+        });
+
+        $("#re").click(function () {
+
+            $("#re").val("")
+            
+        });
+
+        $("#bd").click(function () {
+            var x = document.getElementById("txt").value;
+            if (x=="") {
+                $("#txt").val("0.");
+            } else {
+                $("#txt").val(x + ".")
+            }
         });
     });
